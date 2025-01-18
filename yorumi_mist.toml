@@ -1,0 +1,43 @@
+[colors]
+ansi = [
+    "#060914",  # Black
+    "#4E0E0E",  # Red
+    "#1C4642",  # Green
+    "#6B5905",  # Yellow
+    "#597BC0",  # Blue
+    "#0E0D17",  # Magenta
+    "#343742",  # Cyan
+    "#A7A9B5"   # White
+]
+
+background = "#BDBFCB"
+foreground = "#060914"
+
+brights = [
+    "#0C0F1A",  # Bright Black
+    "#F47171",  # Bright Red
+    "#9CB67D",  # Bright Green
+    "#BA9A5E",  # Bright Yellow
+    "#788AD3",  # Bright Blue
+    "#DA72A2",  # Bright Magenta
+    "#9D7BBF",  # Bright Cyan
+    "#F3AB59"   # Bright White
+]
+
+cursor_bg = "#060914"
+cursor_border = "#060914"
+cursor_fg = "#BDBFCB"
+selection_bg = "#343742"
+selection_fg = "#BDBFCB"
+
+[colors.indexed]
+16 = "#F3AB59"
+17 = "#85C7B8"
+18 = "#597BC0"
+19 = "#80AA6E"
+20 = "#F05C60"
+21 = "#9D7BBF"
+
+[metadata]
+name = "Yorumi Mist"
+
