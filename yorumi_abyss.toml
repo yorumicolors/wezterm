@@ -1,0 +1,43 @@
+
+[colors]
+ansi = [
+    "#060914",
+    "#4E0E0E",
+    "#1C4642",
+    "#6B5905",
+    "#597BC0",
+    "#0E0D17",
+    "#343742",
+    "#A7A9B5",
+]
+
+background = "#060914"
+foreground = "#BDBFCB"
+
+brights = [
+    "#0C0F1A",
+    "#F47171",
+    "#9CB67D",
+    "#D6B476",
+    "#788AD3",
+    "#DA72A2",
+    "#9D7BBF",
+    "#F3AB59",
+]
+
+cursor_bg = "#BDBFCB"
+cursor_border = "#BDBFCB"
+cursor_fg = "#060914"
+selection_bg = "#878996"
+selection_fg = "#060914"
+
+[colors.indexed]
+16 = "#9C672B"
+17 = "#7AA8A7"
+18 = "#788AD3"
+19 = "#667C4B"
+20 = "#913B3B"
+21 = "#A188C3"
+
+[metadata]
+name = "Yorumi Abyss"
