@@ -5,35 +5,35 @@ ansi = [
   '#697F4D',
   '#9D672F',
   '#42608A',
-  '#8D3F5A',
+  '#614686',
   '#478584',
-  '#878996',
+  '#A7A9B5',
 ]
 brights = [
   '#343742',
-  '#C65E53',
-  '#8CB167',
-  '#C39D55',
-  '#597BC0',
-  '#BB5D7D',
-  '#67BBB9',
-  '#A7A9B5',
+  '#F47571',
+  '#A9D07C',
+  '#E1C084',
+  '#798DDC',
+  '#AD8FD6',
+  '#85E0CB',
+  '#C0BCE6',
 ]
 
 background = '#0E0D17'
-foreground = '#A7A9B5'
+foreground = '#C0BCE6'
 
 
-cursor_bg = '#C6DFEC'
-cursor_fg = '#060914'
+cursor_bg = '#C0BCE6'
+cursor_fg = '#0E0D17'
 
-compose_cursor = '#D7E1B7'
-cursor_border = '#BDBFCB'
+compose_cursor = '#2A1844'
+cursor_border = '#AD8FD6'
 
 scrollbar_thumb = '#343742'
 
-selection_bg = '#343742'
-selection_fg = '#BDBFCB'
+selection_bg = '#121520'
+selection_fg = '#C0BCE6'
 
 split = '#343742'
 visual_bell = '#343742'
@@ -45,9 +45,9 @@ inactive_tab_edge = '#AD8FD6'
 
 [colors.tab_bar.active_tab]
 bg_color = '#0E0D17'
-fg_color = '#BDBFCB'
+fg_color = '#C0BCE6'
 intensity = 'Normal'
-italic = false
+italic = true
 strikethrough = false
 underline = 'None'
 
