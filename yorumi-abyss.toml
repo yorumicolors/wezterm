@@ -1,0 +1,87 @@
+[colors]
+ansi = [
+  '#060914',
+  '#C65E53',
+  '#8CB167',
+  '#C39D55',
+  '#597BC0',
+  '#BB5D7D',
+  '#67BBB9',
+  '#BDBFCB',
+]
+brights = [
+  '#343742',
+  '#F47571',
+  '#A9D07C',
+  '#E1C084',
+  '#798DDC',
+  '#E184AF',
+  '#85E0CB',
+  '#D7E1B7',
+]
+
+
+background = '#060914'
+foreground = '#BDBFCB'
+
+cursor_bg = '#878996'
+cursor_fg = '#060914'
+
+compose_cursor = '#C6DFEC'
+cursor_border = '#BDBFCB'
+
+scrollbar_thumb = '#343742'
+
+selection_bg = '#343742'
+selection_fg = '#BDBFCB'
+
+split = '#1D202B'
+visual_bell = '#1D202B'
+
+
+[colors.tab_bar]
+background = '#121520'
+inactive_tab_edge = '#060914'
+
+[colors.tab_bar.active_tab]
+bg_color = '#060914'
+fg_color = '#BDBFCB'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#121520'
+fg_color = '#878996'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#141712'
+fg_color = '#BDBFCB'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#121520'
+fg_color = '#A9D07C'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#1C4642'
+fg_color = '#8CB167'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[metadata]
+name = 'Yorumi Abyss'
