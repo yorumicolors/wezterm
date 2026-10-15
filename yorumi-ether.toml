@@ -1,0 +1,85 @@
+[colors]
+ansi = [
+  '#02040e',
+  '#BA3D31',
+  '#6A8A56',
+  '#a48237',
+  '#435D95',
+  '#A04A6C',
+  '#2AA0A4',
+  '#DEDFE5',
+]
+brights = [
+  '#4D4F58',
+  '#F35B4B',
+  '#AADB71',
+  '#e3cb52',
+  '#7088E5',
+  '#DF7CAA',
+  '#6DDBDD',
+  '#F1F1F4',
+]
+
+background = '#02040e'
+foreground = '#DEDFE5'
+
+cursor_bg = '#F1F1F4'
+cursor_fg = '#02040e'
+
+compose_cursor = '#7088E5'
+cursor_border = '#F1F1F4'
+
+scrollbar_thumb = '#4D4F58'
+
+selection_bg = '#4D4F58'
+selection_fg = '#DEDFE5'
+
+split = '#242630'
+visual_bell = '#242630'
+
+[colors.tab_bar]
+background = '#191B25'
+inactive_tab_edge = '#02040e'
+
+[colors.tab_bar.active_tab]
+bg_color = '#02040e'
+fg_color = '#DEDFE5'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#191B25'
+fg_color = '#8E9099'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#242630'
+fg_color = '#DEDFE5'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#191B25'
+fg_color = '#6A8A56'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#344E34'
+fg_color = '#AADB71'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[metadata]
+name = 'Yorumi Ether'

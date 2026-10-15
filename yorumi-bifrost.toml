@@ -1,0 +1,85 @@
+[colors]
+ansi = [
+  '#02040e',
+  '#842620',
+  '#486440',
+  '#836123',
+  '#284572',
+  '#84375A',
+  '#088287',
+  '#BDBFCB',
+]
+brights = [
+  '#5C5E66',
+  '#BA3D31',
+  '#6A8A56',
+  '#a48237',
+  '#435D95',
+  '#A04A6C',
+  '#2AA0A4',
+  '#F1F1F4',
+]
+
+background = '#F1F1F4'
+foreground = '#191B25'
+
+cursor_bg = '#02040E'
+cursor_fg = '#F1F1F4'
+
+compose_cursor = '#435D95'
+cursor_border = '#02040E'
+
+scrollbar_thumb = '#5C5E66'
+
+selection_bg = '#777880'
+selection_fg = '#FFFFFF'
+
+split = '#242630'
+visual_bell = '#242630'
+
+[colors.tab_bar]
+background = '#191B25'
+inactive_tab_edge = '#F1F1F4'
+
+[colors.tab_bar.active_tab]
+bg_color = '#F1F1F4'
+fg_color = '#191B25'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab]
+bg_color = '#191B25'
+fg_color = '#8E9099'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = '#242630'
+fg_color = '#CECFD8'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab]
+bg_color = '#191B25'
+fg_color = '#6A8A56'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[colors.tab_bar.new_tab_hover]
+bg_color = '#344E34'
+fg_color = '#AADB71'
+intensity = 'Normal'
+italic = false
+strikethrough = false
+underline = 'None'
+
+[metadata]
+name = 'Yorumi Bifrost'
