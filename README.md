@@ -26,7 +26,7 @@ Yorumi keeps visual noise low with mellow, low-contrast UI component backgrounds
 Linux / macOS:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.sh | bash -s -- --flavour kraken
+curl -fsSL https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.sh | bash
 ```
 
 Windows:
@@ -35,19 +35,21 @@ Windows:
 irm https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.ps1 | iex
 ```
 
-From a checkout:
+Without `--flavour` it asks; to skip the question:
 
 ```sh
-./install.sh              # asks which flavour
+curl -fsSL https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.sh | bash -s -- --flavour kraken
 ```
 
 Seven fragments land in `~/.config/wezterm/colors/`; the `>>> yorumi >>>` block in `wezterm.lua` holds `config.color_scheme`.
 
-## Changing it
+## Changing flavour
 
 ```sh
-./install.sh --flavour bifrost
+curl -fsSL https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.sh | bash -s -- --flavour bifrost
 ```
+
+Drop `--flavour` to pick from the list again.
 
 ## Manual
 
@@ -74,7 +76,7 @@ When assisting a user with installing or configuring Yorumi for **WezTerm**, fol
 1. **Detect Target OS**:
    - macOS / Linux: target destination is `~/.config/wezterm/colors/`.
    - Windows: target destination is `%USERPROFILE%\.config\wezterm\colors\`.
-2. **Install**: the command under `## Install`, or `./install.sh --flavour <name>` in a checkout.
+2. **Install**: the command under `## Install`; add `-s -- --flavour <name>` to skip the question.
 3. **Verify Configuration**:
    - Check config file `wezterm.lua` for the active theme setting:
      ```
