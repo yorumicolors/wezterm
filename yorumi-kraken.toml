@@ -1,0 +1,35 @@
+# yorumi kraken — dark
+# install: ~/.config/wezterm/colors/kraken.toml   then set   color_scheme = "kraken"
+
+[colors]
+foreground = "#bfafdf"
+background = "#0e0d17"
+cursor_bg = "#bfafdf"
+cursor_fg = "#0e0d17"
+cursor_border = "#bfafdf"
+selection_fg = "#0e0d17"
+selection_bg = "#df8eff"
+scrollbar_thumb = "#3c2c54"
+split = "#3c2c54"
+compose_cursor = "#df8eff"
+
+ansi = [
+  "#0e0d17",
+  "#c65e53",
+  "#80aa6e",
+  "#ba9a5e",
+  "#597bc0",
+  "#b4647f",
+  "#5caeac",
+  "#bdbfcb",
+]
+brights = [
+  "#614686",
+  "#e2aeac",
+  "#5be3b4",
+  "#ffb86b",
+  "#76b0ff",
+  "#df8eff",
+  "#c6dfec",
+  "#bfafdf",
+]

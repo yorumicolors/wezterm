@@ -1,0 +1,35 @@
+# yorumi cosmic — dark
+# install: ~/.config/wezterm/colors/cosmic.toml   then set   color_scheme = "cosmic"
+
+[colors]
+foreground = "#ffffff"
+background = "#150718"
+cursor_bg = "#ffffff"
+cursor_fg = "#150718"
+cursor_border = "#ffffff"
+selection_fg = "#150718"
+selection_bg = "#df7caa"
+scrollbar_thumb = "#57263c"
+split = "#57263c"
+compose_cursor = "#df7caa"
+
+ansi = [
+  "#150718",
+  "#ea7262",
+  "#a9d07c",
+  "#e4d278",
+  "#798ddc",
+  "#db8bae",
+  "#85e0cb",
+  "#bdbfcb",
+]
+brights = [
+  "#8d3f5a",
+  "#e2aeac",
+  "#d0dfbe",
+  "#e2d8bb",
+  "#afb9df",
+  "#deb9d0",
+  "#c6dfec",
+  "#ffffff",
+]

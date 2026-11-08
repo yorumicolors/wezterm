@@ -1,0 +1,35 @@
+# yorumi kabocha — dark
+# install: ~/.config/wezterm/colors/kabocha.toml   then set   color_scheme = "kabocha"
+
+[colors]
+foreground = "#f5c5b0"
+background = "#150b03"
+cursor_bg = "#f5c5b0"
+cursor_fg = "#150b03"
+cursor_border = "#f5c5b0"
+selection_fg = "#150b03"
+selection_bg = "#ffb86b"
+scrollbar_thumb = "#3d230f"
+split = "#3d230f"
+compose_cursor = "#ffb86b"
+
+ansi = [
+  "#150b03",
+  "#c65e53",
+  "#80aa6e",
+  "#ba9a5e",
+  "#597bc0",
+  "#b4647f",
+  "#5caeac",
+  "#bdbfcb",
+]
+brights = [
+  "#5d3718",
+  "#e2aeac",
+  "#5be3b4",
+  "#ffb86b",
+  "#76b0ff",
+  "#df8eff",
+  "#c6dfec",
+  "#f5c5b0",
+]

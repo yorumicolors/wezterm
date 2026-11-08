@@ -1,0 +1,35 @@
+# yorumi ether — dark
+# install: ~/.config/wezterm/colors/ether.toml   then set   color_scheme = "ether"
+
+[colors]
+foreground = "#ebedf1"
+background = "#02040e"
+cursor_bg = "#ebedf1"
+cursor_fg = "#02040e"
+cursor_border = "#ebedf1"
+selection_fg = "#02040e"
+selection_bg = "#bdbfcb"
+scrollbar_thumb = "#2b2d37"
+split = "#2b2d37"
+compose_cursor = "#bdbfcb"
+
+ansi = [
+  "#02040e",
+  "#de8280",
+  "#a1b38c",
+  "#cdb68c",
+  "#7f8cbf",
+  "#c9809f",
+  "#96c3b8",
+  "#bdbfcb",
+]
+brights = [
+  "#4d4f58",
+  "#ea7262",
+  "#a9d07c",
+  "#e4d278",
+  "#798ddc",
+  "#db8bae",
+  "#85e0cb",
+  "#ebedf1",
+]

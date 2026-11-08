@@ -1,0 +1,35 @@
+# yorumi bifrost — light
+# install: ~/.config/wezterm/colors/bifrost.toml   then set   color_scheme = "bifrost"
+
+[colors]
+foreground = "#191b25"
+background = "#ebedf1"
+cursor_bg = "#191b25"
+cursor_fg = "#ebedf1"
+cursor_border = "#191b25"
+selection_fg = "#191b25"
+selection_bg = "#afb9df"
+scrollbar_thumb = "#94969d"
+split = "#94969d"
+compose_cursor = "#afb9df"
+
+ansi = [
+  "#191b25",
+  "#4e0e0e",
+  "#213828",
+  "#4e3e0a",
+  "#0d2c4e",
+  "#4c1036",
+  "#054951",
+  "#a8aab5",
+]
+brights = [
+  "#4d4f58",
+  "#913b3b",
+  "#667c4b",
+  "#9d672f",
+  "#42608a",
+  "#8d3f5a",
+  "#49837e",
+  "#ebedf1",
+]

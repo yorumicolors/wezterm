@@ -1,0 +1,35 @@
+# yorumi abyss — dark
+# install: ~/.config/wezterm/colors/abyss.toml   then set   color_scheme = "abyss"
+
+[colors]
+foreground = "#bdbfcb"
+background = "#060914"
+cursor_bg = "#bdbfcb"
+cursor_fg = "#060914"
+cursor_border = "#bdbfcb"
+selection_fg = "#060914"
+selection_bg = "#6ddbdd"
+scrollbar_thumb = "#252731"
+split = "#252731"
+compose_cursor = "#6ddbdd"
+
+ansi = [
+  "#060914",
+  "#c65e53",
+  "#80aa6e",
+  "#ba9a5e",
+  "#597bc0",
+  "#b4647f",
+  "#5caeac",
+  "#9496a0",
+]
+brights = [
+  "#3e4049",
+  "#f35b4b",
+  "#aadb71",
+  "#e3cb52",
+  "#7088e5",
+  "#df7caa",
+  "#6ddbdd",
+  "#bdbfcb",
+]

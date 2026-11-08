@@ -1,0 +1,35 @@
+# yorumi ryujin — dark
+# install: ~/.config/wezterm/colors/ryujin.toml   then set   color_scheme = "ryujin"
+
+[colors]
+foreground = "#afb9df"
+background = "#0b0b19"
+cursor_bg = "#afb9df"
+cursor_fg = "#0b0b19"
+cursor_border = "#afb9df"
+selection_fg = "#0b0b19"
+selection_bg = "#76b0ff"
+scrollbar_thumb = "#293a57"
+split = "#293a57"
+compose_cursor = "#76b0ff"
+
+ansi = [
+  "#0b0b19",
+  "#de8280",
+  "#a1b38c",
+  "#cdb68c",
+  "#7f8cbf",
+  "#c9809f",
+  "#96c3b8",
+  "#bdbfcb",
+]
+brights = [
+  "#42608a",
+  "#e2aeac",
+  "#5be3b4",
+  "#ffb86b",
+  "#76b0ff",
+  "#df8eff",
+  "#c6dfec",
+  "#afb9df",
+]
