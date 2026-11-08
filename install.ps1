@@ -1,5 +1,6 @@
 # Yorumi theme installer for WezTerm (Windows PowerShell)
 $ErrorActionPreference = "Stop"
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 $destDir = "$env:USERPROFILE\.config\wezterm\colors"
 if (-not (Test-Path -Path $destDir)) {
@@ -25,7 +26,7 @@ foreach ($f in $files) {
         Copy-Item -Path $localFlat -Destination $target -Force
     } else {
         $url = "$rawBase/$f"
-        Invoke-RestMethod -Uri $url -OutFile $target
+        Invoke-WebRequest -Uri $url -OutFile $target -UseBasicParsing
     }
     Write-Host "✓ Installed: $target" -ForegroundColor Green
 }
