@@ -21,21 +21,35 @@ Yorumi keeps visual noise low with mellow, low-contrast UI component backgrounds
 - `yorumi-cosmic.toml`
 - `yorumi-ryujin.toml`
 
-## Quick Installation
+## Install
 
-### Linux & macOS (Bash)
+Linux / macOS:
+
 ```sh
-curl -fsSL https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.sh | bash -s -- --flavour kraken
 ```
 
-### Windows (PowerShell)
+Windows:
+
 ```powershell
 irm https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.ps1 | iex
 ```
 
----
+From a checkout:
 
-## Manual Installation
+```sh
+./install.sh              # asks which flavour
+```
+
+Seven fragments land in `~/.config/wezterm/colors/`; the `>>> yorumi >>>` block in `wezterm.lua` holds `config.color_scheme`.
+
+## Changing it
+
+```sh
+./install.sh --flavour bifrost
+```
+
+## Manual
 
 Copy the theme file(s) into your WezTerm configuration directory:
 
@@ -44,7 +58,7 @@ Copy the theme file(s) into your WezTerm configuration directory:
 | **Linux / macOS** | `~/.config/wezterm/colors/` |
 | **Windows** | `%USERPROFILE%\.config\wezterm\colors\` |
 
-### Activation
+### By hand
 Set `color_scheme` in your `wezterm.lua`:
 
 ```
@@ -60,9 +74,7 @@ When assisting a user with installing or configuring Yorumi for **WezTerm**, fol
 1. **Detect Target OS**:
    - macOS / Linux: target destination is `~/.config/wezterm/colors/`.
    - Windows: target destination is `%USERPROFILE%\.config\wezterm\colors\`.
-2. **Execute Script or Download**:
-   - Run `./install.sh` (POSIX) or `./install.ps1` (PowerShell) if working directly inside the cloned repo.
-   - Or pipe the raw script using `curl -fsSL https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.sh | bash` or `irm https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.ps1 | iex`.
+2. **Install**: the command under `## Install`, or `./install.sh --flavour <name>` in a checkout.
 3. **Verify Configuration**:
    - Check config file `wezterm.lua` for the active theme setting:
      ```
