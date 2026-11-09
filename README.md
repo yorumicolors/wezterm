@@ -41,7 +41,27 @@ Without `--flavour` it asks; to skip the question:
 curl -fsSL https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.sh | bash -s -- --flavour kraken
 ```
 
-Seven fragments land in `~/.config/wezterm/colors/` as `yorumi-<flavour>.toml`; the `>>> yorumi >>>` block in `wezterm.lua` sets `config.color_scheme = "yorumi-<flavour>"`. WezTerm names a scheme after the file it was loaded from, so the value always matches the fragment's file name.
+Seven fragments land in `${XDG_CONFIG_HOME:-$HOME/.config}/wezterm/colors/` as
+`yorumi-<flavour>.toml`; the `>>> yorumi >>>` block sets
+`config.color_scheme = "yorumi-<flavour>"`. WezTerm names a scheme after the file it was loaded
+from, so the value always matches the fragment's file name.
+
+Which Lua file gets the block:
+
+1. `$WEZTERM_CONFIG_FILE`, used verbatim when it is set and non-empty — no existence check, so a
+   typo creates a new file rather than failing.
+2. Otherwise the first of these that exists:
+   `~/.wezterm.lua`, `${XDG_CONFIG_HOME:-$HOME/.config}/wezterm/wezterm.lua`, then
+   `<dir>/wezterm/wezterm.lua` for each absolute entry of `$XDG_CONFIG_DIRS` (default `/etc/xdg`).
+3. When none exists, `${XDG_CONFIG_HOME:-$HOME/.config}/wezterm/wezterm.lua` is created.
+
+`~/.wezterm.lua` is checked before the XDG file, so a dotfile in your home directory is the one that
+gets edited. The block is written immediately above the returned table, because a `color_scheme`
+set after `return` would never be read.
+
+On Windows, `install.ps1` only writes the fragments — `%USERPROFILE%\.config\wezterm\colors\`, or
+`$XDG_CONFIG_HOME\wezterm\colors\` when it holds an absolute path. It never edits a config and selects
+no flavour.
 
 ## Changing flavour
 
@@ -57,14 +77,16 @@ Copy the theme file(s) into your WezTerm configuration directory:
 
 | OS | Destination Path |
 | --- | --- |
-| **Linux / macOS** | `~/.config/wezterm/colors/` |
-| **Windows** | `%USERPROFILE%\.config\wezterm\colors\` |
+| **Linux / macOS** | `${XDG_CONFIG_HOME:-$HOME/.config}/wezterm/colors/` |
+| **Windows** | `%USERPROFILE%\.config\wezterm\colors\` (or `%XDG_CONFIG_HOME%\wezterm\colors\` when set) |
 
 ### By hand
-Install the fragment as `colors/yorumi-<flavour>.toml`, then set `color_scheme` in your `wezterm.lua` to that file name without the extension:
+Install the fragment as `colors/yorumi-<flavour>.toml` in that directory, then set `color_scheme` in
+the `wezterm.lua` WezTerm loads — `$WEZTERM_CONFIG_FILE` if you use it, otherwise `~/.wezterm.lua` or
+the XDG file — to that file name without the extension:
 
 ```
-config.color_scheme = "yorumi-abyss"
+config.color_scheme = "yorumi-abyss"   -- the abyss file; use the flavour you installed
 ```
 
 ---
@@ -74,15 +96,18 @@ config.color_scheme = "yorumi-abyss"
 When assisting a user with installing or configuring Yorumi for **WezTerm**, follow these deterministic steps:
 
 1. **Detect Target OS**:
-   - macOS / Linux: target destination is `~/.config/wezterm/colors/`.
-   - Windows: target destination is `%USERPROFILE%\.config\wezterm\colors\`.
+   - macOS / Linux: target destination is `${XDG_CONFIG_HOME:-$HOME/.config}/wezterm/colors/`.
+   - Windows: target destination is `%USERPROFILE%\.config\wezterm\colors\`, or the same tree under
+     `%XDG_CONFIG_HOME%` when that variable holds an absolute path.
 2. **Install**: the command under `## Install`; add `-s -- --flavour <name>` to skip the question.
 3. **Verify Configuration**:
-   - Check config file `wezterm.lua` for the active theme setting:
+   - The block goes into `$WEZTERM_CONFIG_FILE` when set and non-empty; otherwise the first existing of
+     `~/.wezterm.lua`, `${XDG_CONFIG_HOME:-$HOME/.config}/wezterm/wezterm.lua` and any
+     `$XDG_CONFIG_DIRS/wezterm/wezterm.lua`. Check that file for the active theme setting:
      ```
      config.color_scheme = "yorumi-abyss"
      ```
-   - Ensure the theme filename matches what is in `~/.config/wezterm/colors/`.
+   - Ensure the scheme name matches a fragment file in the `colors/` directory above.
 
 ---
 
