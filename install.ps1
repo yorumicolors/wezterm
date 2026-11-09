@@ -3,12 +3,26 @@ $ErrorActionPreference = "Stop"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 $destDir = "$env:USERPROFILE\.config\wezterm\colors"
+$rawBase = "https://raw.githubusercontent.com/yorumicolors/wezterm/main"
+$files = @("yorumi-ether.toml", "yorumi-abyss.toml", "yorumi-bifrost.toml", "yorumi-kraken.toml", "yorumi-kabocha.toml", "yorumi-cosmic.toml", "yorumi-ryujin.toml")
+
+# download beside the target and move it in: a failed fetch leaves nothing behind
+function Save-One([string] $name, [string] $target) {
+    $part = "$target.part.$PID"
+    try {
+        Invoke-WebRequest -Uri "$rawBase/$name" -OutFile $part -UseBasicParsing
+    } catch {
+        Remove-Item -LiteralPath $part -ErrorAction SilentlyContinue
+        Write-Host "yorumi: could not download $name from $rawBase" -ForegroundColor Red
+        Write-Host "yorumi: if that repository is not public yet, clone it and run this script from the checkout." -ForegroundColor Red
+        exit 3
+    }
+    Move-Item -LiteralPath $part -Destination $target -Force
+}
+
 if (-not (Test-Path -Path $destDir)) {
     New-Item -ItemType Directory -Path $destDir -Force | Out-Null
 }
-
-$rawBase = "https://raw.githubusercontent.com/yorumicolors/wezterm/main"
-$files = @("yorumi-ether.toml", "yorumi-abyss.toml", "yorumi-bifrost.toml", "yorumi-kraken.toml", "yorumi-kabocha.toml", "yorumi-cosmic.toml", "yorumi-ryujin.toml")
 
 $scriptDir = $PSScriptRoot
 
@@ -25,12 +39,12 @@ foreach ($f in $files) {
     } elseif ($localFlat -and (Test-Path $localFlat)) {
         Copy-Item -Path $localFlat -Destination $target -Force
     } else {
-        $url = "$rawBase/$f"
-        Invoke-WebRequest -Uri $url -OutFile $target -UseBasicParsing
+        Save-One $f $target
     }
     Write-Host "✓ Installed: $target" -ForegroundColor Green
 }
 
 Write-Host "`nSuccessfully installed Yorumi for WezTerm!" -ForegroundColor Green
-Write-Host "Set color_scheme in your wezterm.lua:"
+Write-Host "WezTerm names a scheme after its file, so the name is the file stem:"
+Write-Host ""
 Write-Host "    config.color_scheme = `"yorumi-abyss`""

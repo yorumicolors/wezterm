@@ -1,5 +1,5 @@
 # yorumi kraken — dark
-# install: ~/.config/wezterm/colors/kraken.toml   then set   color_scheme = "kraken"
+# install: ~/.config/wezterm/colors/yorumi-kraken.toml   then set   color_scheme = "yorumi-kraken"
 
 [colors]
 foreground = "#bfafdf"

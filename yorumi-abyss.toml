@@ -1,5 +1,5 @@
 # yorumi abyss — dark
-# install: ~/.config/wezterm/colors/abyss.toml   then set   color_scheme = "abyss"
+# install: ~/.config/wezterm/colors/yorumi-abyss.toml   then set   color_scheme = "yorumi-abyss"
 
 [colors]
 foreground = "#bdbfcb"

@@ -1,5 +1,5 @@
 # yorumi kabocha — dark
-# install: ~/.config/wezterm/colors/kabocha.toml   then set   color_scheme = "kabocha"
+# install: ~/.config/wezterm/colors/yorumi-kabocha.toml   then set   color_scheme = "yorumi-kabocha"
 
 [colors]
 foreground = "#f5c5b0"

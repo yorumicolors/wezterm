@@ -1,5 +1,5 @@
 # yorumi ryujin — dark
-# install: ~/.config/wezterm/colors/ryujin.toml   then set   color_scheme = "ryujin"
+# install: ~/.config/wezterm/colors/yorumi-ryujin.toml   then set   color_scheme = "yorumi-ryujin"
 
 [colors]
 foreground = "#afb9df"

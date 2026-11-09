@@ -41,7 +41,7 @@ Without `--flavour` it asks; to skip the question:
 curl -fsSL https://raw.githubusercontent.com/yorumicolors/wezterm/main/install.sh | bash -s -- --flavour kraken
 ```
 
-Seven fragments land in `~/.config/wezterm/colors/`; the `>>> yorumi >>>` block in `wezterm.lua` holds `config.color_scheme`.
+Seven fragments land in `~/.config/wezterm/colors/` as `yorumi-<flavour>.toml`; the `>>> yorumi >>>` block in `wezterm.lua` sets `config.color_scheme = "yorumi-<flavour>"`. WezTerm names a scheme after the file it was loaded from, so the value always matches the fragment's file name.
 
 ## Changing flavour
 
@@ -61,7 +61,7 @@ Copy the theme file(s) into your WezTerm configuration directory:
 | **Windows** | `%USERPROFILE%\.config\wezterm\colors\` |
 
 ### By hand
-Set `color_scheme` in your `wezterm.lua`:
+Install the fragment as `colors/yorumi-<flavour>.toml`, then set `color_scheme` in your `wezterm.lua` to that file name without the extension:
 
 ```
 config.color_scheme = "yorumi-abyss"

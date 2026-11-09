@@ -1,5 +1,5 @@
 # yorumi ether — dark
-# install: ~/.config/wezterm/colors/ether.toml   then set   color_scheme = "ether"
+# install: ~/.config/wezterm/colors/yorumi-ether.toml   then set   color_scheme = "yorumi-ether"
 
 [colors]
 foreground = "#ebedf1"

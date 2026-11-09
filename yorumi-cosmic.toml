@@ -1,5 +1,5 @@
 # yorumi cosmic — dark
-# install: ~/.config/wezterm/colors/cosmic.toml   then set   color_scheme = "cosmic"
+# install: ~/.config/wezterm/colors/yorumi-cosmic.toml   then set   color_scheme = "yorumi-cosmic"
 
 [colors]
 foreground = "#ffffff"

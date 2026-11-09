@@ -1,5 +1,5 @@
 # yorumi bifrost — light
-# install: ~/.config/wezterm/colors/bifrost.toml   then set   color_scheme = "bifrost"
+# install: ~/.config/wezterm/colors/yorumi-bifrost.toml   then set   color_scheme = "yorumi-bifrost"
 
 [colors]
 foreground = "#191b25"
